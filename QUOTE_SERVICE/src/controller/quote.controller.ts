@@ -3,14 +3,14 @@ import axios from "axios";
 import amqp, { Channel, Connection} from "amqplib";
 
 
-let connection: Connection, channel: Channel
-async function connect() {
-  const amqpServer = "amqp://localhost:5672";
-  connection = await amqp.connect(amqpServer);
-  channel = await connection.createChannel();
-  await channel.assertQueue("QUOTE_SERVICE");
-}
-connect()
+// let connection: Connection, channel: Channel
+// async function connect() {
+//   const amqpServer = ""; // "amqp://localhost:5672";
+//   connection = await amqp.connect(amqpServer);
+//   channel = await connection.createChannel();
+//   await channel.assertQueue("QUOTE_SERVICE");
+// }
+// connect()
 
 export async function getQuoteHandler(req: Request, res: Response) {
   try {
@@ -25,7 +25,7 @@ export async function getQuoteHandler(req: Request, res: Response) {
     const randomQuote = data[Math.floor(Math.random() * (data.length))];
 
     // Send data to queue
-    channel.sendToQueue("AUTH_SERVICE",Buffer.from(JSON.stringify({randomQuote})));
+    // channel.sendToQueue("AUTH_SERVICE",Buffer.from(JSON.stringify({randomQuote})));
  
     // channel.consume("QUOTE_SERVICE", (data: any) => {
     //    JSON.parse(data.content);

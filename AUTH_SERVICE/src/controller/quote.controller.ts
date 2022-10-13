@@ -7,7 +7,7 @@ export async function getQuoteHandler(req: Request, res: Response) {
 
   try {
     async function connect() {
-      const amqpServer = "amqp://localhost:5672";
+      const amqpServer = ""; // "amqp://localhost:5672";
       connection = await amqp.connect(amqpServer);
       channel = await connection.createChannel();
       await channel.assertQueue("AUTH_SERVICE");

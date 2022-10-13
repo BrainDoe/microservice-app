@@ -11,7 +11,7 @@ config();
 const app: Application = express();
 app.use(express.json());
 
-app.use(deserializeUser);
+// app.use(deserializeUser);
 
 const port: number = Number(process.env.PORT || 8089);
 
