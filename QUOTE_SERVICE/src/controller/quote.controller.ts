@@ -25,7 +25,7 @@ export async function getQuoteHandler(req: Request, res: Response) {
     const randomQuote = data[Math.floor(Math.random() * (data.length))];
 
     // Send data to queue
-    channel.sendToQueue("AUTH_SERVICE", Buffer.from(JSON.stringify({randomQuote})));
+    channel.sendToQueue("AUTH_SERVICE", Buffer.from(JSON.stringify(randomQuote)));
 
     return res.status(200).send({
       status: "success",

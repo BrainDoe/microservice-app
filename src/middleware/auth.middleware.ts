@@ -25,7 +25,7 @@ const deserializeUser = async (req: Request, res: Response, next: NextFunction) 
       })
     }
     // @ts-ignore
-    req.user = data
+    res.locals.user = data
   })
 
   return next();

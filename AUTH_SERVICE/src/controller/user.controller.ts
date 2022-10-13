@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-// import {nanoid} from "nanoid";
 import { v4 as uuidv4 } from 'uuid';
 import {promises} from "fs";
 import { User } from "../types/user.type";
