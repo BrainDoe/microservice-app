@@ -23,4 +23,4 @@
 
 ### Quotes Service
 
-      1. Send a GET request to quotes indpoint in the quote service. Make sure to pass along the token return from the login into the authorization header
+1. Send a GET request to quotes indpoint in the quote service. Make sure to pass along the token return from the login into the authorization header
