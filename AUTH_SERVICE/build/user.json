@@ -1,0 +1,11 @@
+{
+    "user": [
+        {
+            "id": "string",
+            "name": "Donatus Okwe",
+            "email": "donatus@gmail.com",
+            "password": "123456",
+            "active": true
+        }
+    ]
+}
